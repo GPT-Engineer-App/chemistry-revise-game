@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const questions = [
   {
@@ -45,7 +46,10 @@ const Index = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center">
+    <div className="h-screen w-screen flex flex-col items-center justify-center space-y-4">
+      <AspectRatio ratio={16 / 9} className="w-full max-w-md">
+        <img src="/images/carbon-atom-animation.gif" alt="Carbon Atom Animation" className="object-cover rounded-md" />
+      </AspectRatio>
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle className="text-center">Year 9 Chemistry Revision Game</CardTitle>
